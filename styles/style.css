@@ -1,52 +1,94 @@
-body {
+:root {
   font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
 }
 
-/* font styles */
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+/* Typography */
+
+/* Headlines */
 h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
   color: #FFF;
+}
+
+h2 {
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
-.h2-white {
-  color: #FFF;
+.h2-black-underline {
+  color: #1A1A1A;
+  text-decoration: underline;
+  text-decoration-color: #00B172;
 }
 
-h3 {
+.h2-white-underline{
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.h3-green-centered {
+  font-size: 2rem;
   color: #00B172;
 }
 
 h4 {
+  font-size: 2rem;
+}
+
+.h4-white {
   color: #FFF;
 }
 
-.paragraph-white {
+/* Paragraphs */
+.p-big {
+  font-size: 2rem;
+}
+
+.p-regular {
+  font-size: 1.6rem;
+}
+
+.p-small {
+  font-size: 1.2rem;
+}
+
+.p-white {
   color: #FFF;
 }
 
-.paragraph-centered {
+.p-centered {
   text-align: center;
 }
 
-
-/* images */
-.img-logo {
-  height: 60px;
+/* Links */
+a, a:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #1A1A1A;
 }
 
-.feature-icon {
-  height: 60px
 
-}
 
-.screenshot {
-  width: 50%;
-}
+/* Header */
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 12px;
+}
+
+.img-logo {
+  height: 40px;
 }
 
 .navigation {
@@ -56,48 +98,25 @@ nav {
 }
 
 .navigation > li {
-  padding: 10px;
+  padding: 0px 12px 0px 12px;
 }
 
-.navigation a {
-  text-decoration: none;
-  color: 1A1A1A;
+/* Layout Rules */
+
+.flex-column-center-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#intro {
-  background-image: url("../images/landing.jpg");
-  background-size: cover;
-  height: 800px;
-}
-
-#user-benefit-2 {
-  background-color: #00B172;
-  background-image: url("images/spotify-icon-white.png");
-  /* height: 800px; */
-  height: auto;
-  margin: 25px;
-  padding: 50px;
-}
-
-.centered-logo {
-  position: absolute;
-  height: 120px;
-  width: 120px;
-  /* left: 50%;
-  margin-left: -60px;
-  top: 50%;
-  margin-top: -60px; */
-}
-
-/* flexbox layouts */
-.layout-centered {
+.flex-column-centered {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.layout-row {
+.flex-row-space-around {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -107,19 +126,72 @@ nav {
 .layout-row-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* align-items: top; */
+}
+
+
+/* Sections */
+
+/* Section 1 */
+#intro {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  height: 400px;
+  padding: 120px 80px 0px 80px;
+}
+
+/* Section 2 */
+#user-benefit-1 {
+  padding: 24px 0px 24px 0px;
 }
 
 .feature-box {
   width: 25%;
 }
 
-/*
-Colors:
+.feature-icon {
+  height: 60px
+}
 
-Text: 1A1A1A
-Green: #00B172
-White: #FFF
 
-*/
+/* Section 3 */
+#user-benefit-2 {
+  position: relative;
+  /* background-image: url('images/spotify-icon-white.png');
+  background-position: center; */
+  background-color: #00B172;
+  height: auto;
+  margin: 24px;
+  padding: 48px 48px 48px 48px;
+}
+
+.text-box-left {
+  height: auto;
+  width: 50%;
+}
+
+.text-section {
+  width: 75%;
+}
+
+.image-container {
+  align-items: right;
+  height: auto;
+  width: 50%;
+}
+
+.centered-logo {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  left: 50%;
+  margin-left: -60px;
+  top: 50%;
+  margin-top: -60px;
+}
+
+.screenshot {
+  float: right;
+  width: 50%;
+}
